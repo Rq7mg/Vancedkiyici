@@ -1,73 +1,55 @@
 {
-    "name": "ᴀɴᴏɴ ダ ᴍᴜsɪᴄ",
-    "description": "A Telegram Music Player Bot, written in Python with Pyrogram and Py-Tgcalls.",
-    "logo": "https://te.legra.ph/file/b8a0c1a00db3e57522b53.jpg",
-    "keywords": [
+  "name": "Anon Music",
+  "description": "A Telegram Music Player Bot, written in Python with Pyrogram and Py-Tgcalls.",
+  "logo": "https://te.legra.ph/file/b8a0c1a00db3e57522b53.jpg",
+  "keywords": [
     "python3",
     "telegram",
     "bot",
-    "AnonX",
-    "MusicBot",
-    "telegram-bot",
+    "musicbot",
     "pyrogram"
-    ],
-    "env": {
-      "API_ID": {
-        "description": "Get this value from https://my.telegram.org",
-        "value": 22659994"",
-        "required": true
-      },
-      "API_HASH": {
-        "description": "Get this value from https://my.telegram.org",
-        "value": "2c89964a0088a7a39ec819c60ae67de7",
-        "required": true
-      },
-      "BOT_TOKEN": {
-        "description": "A Bot's token from Botfather",
-        "value": "5909970619:AAEy3x02B8eyKN5ndhrYzlGqRf37K_ND0zg",
-        "required": true
-      },
-      "MONGO_DB_URI": {
-        "description": "Get a mongodb url from https://cloud.mongodb.com.",
-        "value": "mongodb+srv://acha:acha@cluster0.pjq3j.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
-        "required": true
-      },
-      "OWNER_ID": {
-        "description": "The user id of user whom you would like to add as OWNER.",
-        "value": "6563936773",
-        "required": true
-      },
-      "STRING_SESSION": {
-        "description": "A Pyrogram v2 String Session from @StringFatherBot on Telegram.",
-        "value": "BAFZw5oAgewWLrNY04sek0zw_KOu7oSYv20zzf1pzP2A12BMqIAUFj-HupbN6N90Z4pjtIWJ9kNBjMkewWOS6Xt3MFKhdto1iOAwru258wWqCPajF5Zgb0qXAsWgH1tfUjm3eqa7FI5qLFe-aTo8CDiN3ww8IKMbW6HeRPAn7II_7qrwo1DaUlA6bx943BkA7FNWhd_lVXMkOQ27UfK-uMj-o3Djnx2vngAVlEmxHqn6RCYSppsc89xcwlT2nL8alTNZ8qowVsjlIm1HGtuq_3CjhXXuPBEuGHG-VljGTwb9D3pWGQ6IL-500m4_reH3PJN2NYjYtrFNzDTsqTVmuxSA4ATJRQAAAAG-dXUpAA",
-        "required": true
-      },
-      "HEROKU_API_KEY": {
-        "description": "Your Heroku account's API key",
-        "value": "HRKU-0580452f-5f10-4047-bf46-86e77e1c5027",
-        "required": false
-      },
-      "HEROKU_APP_NAME": {
-        "description": "Your heroku app name",
-        "value": "pulsarmzk",
-        "required": false
-      },
-      "LOGGER_ID": {
-        "description": "Your Log Group ID, add your bot and promote as an admin with full rights!. Channel ki id mat daal dena bsdk.",
-        "value": "-1001343199487",
-        "required": true
-      }
+  ],
+  "env": {
+    "API_ID": {
+      "description": "Get this value from https://my.telegram.org",
+      "required": true
     },
-    "buildpacks": [
-          {
-              "url": "heroku/python"
-          },
-          {
-              "url": "heroku/nodejs"
-          },
-          {
-              "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
-          }
-      ],
-      "stack": "container"
-  }
+    "API_HASH": {
+      "description": "Get this value from https://my.telegram.org",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "A Bot token from BotFather",
+      "required": true
+    },
+    "MONGO_DB_URI": {
+      "description": "MongoDB connection URI",
+      "required": true
+    },
+    "OWNER_ID": {
+      "description": "Telegram user ID of the owner",
+      "required": true
+    },
+    "STRING_SESSION": {
+      "description": "Pyrogram string session",
+      "required": true
+    },
+    "LOGGER_ID": {
+      "description": "Telegram log group ID",
+      "required": true
+    },
+    "HEROKU_API_KEY": {
+      "description": "Heroku API key (optional)",
+      "required": false
+    },
+    "HEROKU_APP_NAME": {
+      "description": "Heroku app name (optional)",
+      "required": false
+    }
+  },
+  "buildpacks": [
+    { "url": "heroku/python" },
+    { "url": "heroku/nodejs" },
+    { "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git" }
+  ]
+}
